@@ -242,6 +242,10 @@ a {
     .box1 img {
         height: 240px;
     }
+
+    .scroll {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
