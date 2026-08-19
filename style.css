@@ -1,0 +1,349 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #161032;
+    background-image: url(images/output-onlinepngtools.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    margin: 5px;
+    margin-top: 155px;
+    padding: 40px 20px 0;
+    text-align: center;
+}
+
+.box {
+    margin-top: 0;
+    font-size: 18px;
+    padding-top: 9px;
+    padding-left: 2.5px;
+    border-radius: 25px;
+    background-color: rgba(55, 64, 94, 0.55);
+    height: 40px;
+    width: 250px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+}
+
+h1 {
+    margin-top: 15px;
+    margin-bottom: 2px;
+    font-size: 75px;
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+p {
+    padding: 5px;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+}
+
+/* Header buttons: flex row that wraps and stays centered on any screen */
+.header-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    padding-bottom: 20px;
+}
+
+#hello2 {
+    background-color: rgb(32, 35, 50);
+    border: 1px solid rgb(32, 35, 50);
+}
+
+button {
+    height: 45px;
+    width: 150px;
+    text-align: center;
+    background-color: rgb(79, 57, 246);
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    border: 1px solid rgb(79, 57, 246);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+button:active {
+    transform: scale(0.90);
+}
+
+/* Space Fact button: anchored to a corner with fixed units, not percentage margins */
+#btn {
+    width: 150px;
+    height: 45px;
+    background-color: rgb(79, 57, 246);
+    color: white;
+    font-size: 15px;
+    border: 1px solid rgb(79, 57, 246);
+    border-radius: 25px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transition: all 0.4s ease;
+    z-index: 10;
+}
+
+.scroll {
+    margin-top: 40px;
+    font-size: 25px;
+    color: white;
+    font-weight: lighter;
+    opacity: 0.60;
+    text-align: center;
+}
+
+.header2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    margin: 5px;
+    margin-top: 300px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 15px;
+    margin-bottom: 2px;
+    font-size: 45px;
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+/* Card grid: wraps and centers naturally instead of relying on fixed-width flex row */
+.boxes {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 50px;
+    padding: 0 20px;
+}
+
+.box1 {
+    width: 100%;
+    max-width: 450px;
+    background-color: rgb(49, 57, 102);
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all ease 0.4s;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.box1 img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    transition: all ease 0.4s;
+}
+
+.box1:hover {
+    transform: scale(1.03);
+}
+
+h3 {
+    font-size: 28px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    margin: 15px 15px 0;
+    text-align: center;
+}
+
+.box1 p {
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES
+========================================== */
+
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 52px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .boxes {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .boxes {
+        gap: 35px;
+    }
+
+    .box1 img {
+        height: 240px;
+    }
+
+    .scroll {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .box {
+        width: 220px;
+        font-size: 14px;
+    }
+
+    button {
+        width: 130px;
+        height: 40px;
+        font-size: 13px;
+    }
+
+    #btn {
+        width: 120px;
+        height: 40px;
+        font-size: 12px;
+        top: 12px;
+        right: 12px;
+    }
+
+    .box1 img {
+        height: 200px;
+    }
+
+    .scroll {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .box {
+        width: 200px;
+        font-size: 12px;
+    }
+
+    button {
+        width: 115px;
+        height: 38px;
+        font-size: 12px;
+    }
+
+    #btn {
+        width: 100px;
+        font-size: 11px;
+    }
+
+    .scroll {
+        font-size: 16px;
+    }
+}
