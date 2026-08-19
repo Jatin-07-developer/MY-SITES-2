@@ -22,3 +22,10 @@ button3.addEventListener("contextmenu" , ()=>{
 button3.addEventListener("click" , ()=>{
     alert("THE SITE IS UNDER CONSTRUCTION...!!")
 })
+
+var scrollBtn = document.getElementById("scrollBtn")
+var contentSection = document.getElementById("contentSection")
+
+scrollBtn.addEventListener("click", () => {
+    contentSection.scrollIntoView({ behavior: "smooth" })
+})

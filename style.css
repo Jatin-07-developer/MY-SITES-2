@@ -123,6 +123,7 @@ button:active {
     font-weight: lighter;
     opacity: 0.60;
     text-align: center;
+    cursor: pointer;
     animation: bounce 2s infinite;
 }
 
