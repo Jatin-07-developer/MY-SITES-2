@@ -22,6 +22,19 @@ img {
     max-width: 100%;
     height: auto;
     border-radius: 25px;
+    box-shadow:
+        0 0 22px rgba(80, 229, 254, 0.14),
+        0 0 36px rgba(252, 114, 255, 0.10),
+        0 16px 32px rgba(0, 0, 0, 0.55);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+img:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow:
+        0 0 34px rgba(80, 229, 254, 0.35),
+        0 0 55px rgba(252, 114, 255, 0.28),
+        0 22px 44px rgba(0, 0, 0, 0.65);
 }
 
 h1 {
@@ -148,6 +161,12 @@ h3 {
     font-size: clamp(28px, 4vw, 40px);
     font-weight: 600;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: text-shadow 0.35s ease, color 0.35s ease;
+}
+
+.one:hover h3 {
+    color: rgb(80, 229, 254);
+    text-shadow: 0 0 18px rgba(80, 229, 254, 0.5);
 }
 
 .para2 {
@@ -181,6 +200,21 @@ ul {
     text-align: center;
     padding-left: 20px;
     padding-bottom: 15px;
+    border: 1px solid rgba(80, 229, 254, 0.12);
+    box-shadow:
+        -6px -6px 14px rgba(255, 255, 255, 0.03),
+        10px 10px 26px rgba(0, 0, 0, 0.55),
+        inset 1px 1px 2px rgba(255, 255, 255, 0.05);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.insight:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: rgba(80, 229, 254, 0.55);
+    box-shadow:
+        0 0 30px rgba(80, 229, 254, 0.25),
+        14px 14px 32px rgba(0, 0, 0, 0.6),
+        inset 1px 1px 2px rgba(255, 255, 255, 0.08);
 }
 
 h4 {
@@ -216,6 +250,20 @@ h4 {
     justify-content: center;
     gap: 30px;
     padding: 30px;
+    border: 1px solid rgba(143, 104, 255, 0.15);
+    box-shadow:
+        -6px -6px 16px rgba(255, 255, 255, 0.03),
+        12px 12px 30px rgba(0, 0, 0, 0.55),
+        inset 1px 1px 2px rgba(255, 255, 255, 0.05);
+    transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.container:hover {
+    border-color: rgba(143, 104, 255, 0.5);
+    box-shadow:
+        0 0 40px rgba(143, 104, 255, 0.3),
+        16px 16px 36px rgba(0, 0, 0, 0.65),
+        inset 1px 1px 2px rgba(255, 255, 255, 0.08);
 }
 
 .contain {
