@@ -30,7 +30,3 @@ button3.addEventListener("click" , ()=>{
 scrollBtn.addEventListener("click", () => {
     contentSection.scrollIntoView({ behavior: "smooth" })
 })
-
-Window.addEventListener("scroll", ()=>{
-
-})
