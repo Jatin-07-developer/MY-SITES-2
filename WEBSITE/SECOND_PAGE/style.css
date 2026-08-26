@@ -94,9 +94,7 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* ==========================================
-   STAT BOXES (below the Sun)
-========================================== */
+/* BOX BELOW SUN */
 .boxes {
     display: flex;
     flex-wrap: wrap;
@@ -147,9 +145,7 @@ span {
     font-size: clamp(15px, 2vw, 20px);
 }
 
-/* ==========================================
-   PLANETS SECTION
-========================================== */
+/* Planet Section */
 .planets {
     padding: 0 20px;
 }
@@ -163,8 +159,6 @@ span {
     font-weight: 700;
 }
 
-/* Every planet row shares this layout: image + text side by side,
-   wrapping to a stacked column on narrow screens */
 .mercury,
 .venus,
 .earth,
@@ -285,9 +279,7 @@ ul {
     padding-left: 20px;
 }
 
-/* ==========================================
-   FOOTER
-========================================== */
+/* FOOTER  */
 .footer {
     margin: 150px auto 0;
     width: min(1200px, 90%);
@@ -348,13 +340,7 @@ footer {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* ==========================================
-   RESPONSIVE MEDIA QUERIES
-   (layout only — fonts are fluid via clamp())
-========================================== */
-
-/* Stack each planet row into a single column below 1024px,
-   and center the text instead of left-aligning it */
+/* MEDIA QUERIES */
 @media (max-width: 1024px) {
 
     .mercury,

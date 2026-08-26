@@ -139,9 +139,7 @@ button:active {
     }
 }
 
-/* ==========================================
-   CONTENT SECTION — everything below the fold
-========================================== */
+/* CONTENT SECTION */
 .content {
     padding-top: 20px;
 }
@@ -166,7 +164,7 @@ h2 {
     text-align: center;
 }
 
-/* Card grid: wraps and centers naturally instead of relying on fixed-width flex row */
+/* CARD GRID */
 .boxes {
     margin-top: 50px;
     margin-bottom: 60px;
@@ -224,11 +222,7 @@ a {
     color: white;
 }
 
-/* ==========================================
-   RESPONSIVE MEDIA QUERIES
-   (layout tweaks only — font sizes are fluid via clamp())
-========================================== */
-
+/* MEDIA QUERIES */
 @media (max-width: 1024px) {
     .boxes {
         gap: 40px;
