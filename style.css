@@ -117,24 +117,47 @@ button:active {
 }
 
 /* SPACE FACT POPUP */
+.fact-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 6, 20, 0.65);
+    backdrop-filter: blur(3px);
+    z-index: 90;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.fact-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
 .fact-popup {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(0.85);
     max-width: 90vw;
-    width: 400px;
-    background-color: rgba(32, 35, 50, 0.95);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgb(79, 57, 246);
-    border-radius: 20px;
-    padding: 30px 25px 20px;
+    width: 420px;
+    background:
+        radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.9) 0px, rgba(255, 255, 255, 0.9) 1px, transparent 1px),
+        radial-gradient(circle at 80% 25%, rgba(255, 255, 255, 0.7) 0px, rgba(255, 255, 255, 0.7) 1px, transparent 1px),
+        radial-gradient(circle at 60% 80%, rgba(255, 255, 255, 0.6) 0px, rgba(255, 255, 255, 0.6) 1px, transparent 1px),
+        radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.5) 0px, rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+        radial-gradient(circle at 90% 60%, rgba(255, 255, 255, 0.8) 0px, rgba(255, 255, 255, 0.8) 1px, transparent 1px),
+        linear-gradient(145deg, rgba(41, 25, 90, 0.97) 0%, rgba(23, 16, 55, 0.97) 55%, rgba(12, 9, 32, 0.98) 100%);
+    background-size: 100px 100px, 130px 130px, 90px 90px, 110px 110px, 140px 140px, 100% 100%;
+    border: 1px solid rgba(150, 122, 255, 0.5);
+    border-radius: 22px;
+    padding: 34px 28px 24px;
     text-align: center;
     z-index: 100;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: all 0.3s ease;
+    box-shadow: 0 0 0 rgba(124, 92, 255, 0);
+    transition: opacity 0.35s ease, visibility 0.35s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
 }
 
 .fact-popup.show {
@@ -142,18 +165,71 @@ button:active {
     visibility: visible;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 45px rgba(124, 92, 255, 0.45), 0 0 0 1px rgba(150, 122, 255, 0.3) inset;
+}
+
+.fact-icon {
+    font-size: 40px;
+    margin-bottom: 6px;
+    filter: drop-shadow(0 0 10px rgba(150, 122, 255, 0.7));
+    animation: floaty 3s ease-in-out infinite;
+}
+
+@keyframes floaty {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.fact-title {
+    margin: 0 0 12px;
+    font-size: clamp(18px, 3vw, 22px);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(90deg, #a78bfa, #f5f3ff, #c4b5fd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .fact-popup p {
-    color: white;
+    color: rgba(255, 255, 255, 0.92);
     font-size: clamp(15px, 2vw, 18px);
-    margin-bottom: 20px;
+    line-height: 1.5;
+    margin: 0 0 22px;
+    padding: 0 4px;
 }
 
 .fact-popup button {
-    width: 110px;
-    height: 38px;
+    width: 120px;
+    height: 40px;
     font-size: 13px;
+    background: linear-gradient(135deg, rgb(124, 92, 255), rgb(79, 57, 246));
+    border: 1px solid rgba(150, 122, 255, 0.6);
+    box-shadow: 0 4px 15px rgba(79, 57, 246, 0.4);
+}
+
+.fact-popup button:hover {
+    box-shadow: 0 6px 20px rgba(124, 92, 255, 0.6);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+    .fact-popup {
+        padding: 28px 20px 20px;
+        border-radius: 18px;
+    }
+
+    .fact-icon {
+        font-size: 32px;
+    }
 }
 
 .scroll {

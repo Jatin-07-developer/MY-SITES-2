@@ -5,6 +5,7 @@ var scrollBtn = document.getElementById("scrollBtn")
 var contentSection = document.getElementById("contentSection")
 
 var factPopup = document.getElementById("factPopup")
+var factOverlay = document.getElementById("factOverlay")
 var factText = document.getElementById("factText")
 var factClose = document.getElementById("factClose")
 
@@ -35,10 +36,12 @@ function showRandomFact() {
     var randomIndex = Math.floor(Math.random() * spaceFacts.length)
     factText.textContent = spaceFacts[randomIndex]
     factPopup.classList.add("show")
+    factOverlay.classList.add("show")
 }
 
 function hideFact() {
     factPopup.classList.remove("show")
+    factOverlay.classList.remove("show")
 }
 
 
@@ -67,10 +70,8 @@ factClose.addEventListener("click", () => {
     hideFact()
 })
 
-document.addEventListener("click", (e) => {
-    if (factPopup.classList.contains("show") && !factPopup.contains(e.target) && e.target !== button3) {
-        hideFact()
-    }
+factOverlay.addEventListener("click", () => {
+    hideFact()
 })
 
 scrollBtn.addEventListener("click", () => {
