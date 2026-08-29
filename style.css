@@ -205,6 +205,20 @@ button:active {
     line-height: 1.5;
     margin: 0 0 22px;
     padding: 0 4px;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.fact-popup p.fade {
+    opacity: 0;
+    transform: translateY(4px);
+}
+
+.fact-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
 }
 
 .fact-popup button {
@@ -221,6 +235,18 @@ button:active {
     transform: translateY(-1px);
 }
 
+#factClose {
+    background: transparent;
+    box-shadow: none;
+    border: 1px solid rgba(150, 122, 255, 0.5);
+    color: rgba(255, 255, 255, 0.85);
+}
+
+#factClose:hover {
+    background: rgba(150, 122, 255, 0.12);
+    box-shadow: none;
+}
+
 @media (max-width: 480px) {
     .fact-popup {
         padding: 28px 20px 20px;
@@ -229,6 +255,16 @@ button:active {
 
     .fact-icon {
         font-size: 32px;
+    }
+
+    .fact-actions {
+        gap: 10px;
+    }
+
+    .fact-popup button {
+        width: 105px;
+        height: 36px;
+        font-size: 12px;
     }
 }
 
