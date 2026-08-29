@@ -3,6 +3,8 @@ var button2 = document.getElementById("hello2")
 var button3 = document.getElementById("btn")
 var scrollBtn = document.getElementById("scrollBtn")
 var contentSection = document.getElementById("contentSection")
+var launchOverlay = document.getElementById("launchOverlay")
+var launchText = document.getElementById("launchText")
 
 var factPopup = document.getElementById("factPopup")
 var factOverlay = document.getElementById("factOverlay")
@@ -64,13 +66,49 @@ function hideFact() {
     factOverlay.classList.remove("show")
 }
 
+function setLaunchText(text, isLiftoff) {
+    launchText.classList.remove("pop")
+    void launchText.offsetWidth // restart the pop animation each time
+    launchText.textContent = text
+    launchText.classList.toggle("liftoff-text", !!isLiftoff)
+    launchText.classList.add("pop")
+}
+
+function launchJourney() {
+    launchOverlay.classList.remove("active", "liftoff")
+    void launchOverlay.offsetWidth // force reflow so the sequence restarts every click
+
+    launchOverlay.classList.add("active")
+
+    var countdown = ["3", "2", "1"]
+    countdown.forEach((num, i) => {
+        setTimeout(() => setLaunchText(num, false), i * 400)
+    })
+
+    // ignition + liftoff stage
+    setTimeout(() => {
+        setLaunchText("🚀 LIFTOFF!", true)
+        launchOverlay.classList.add("liftoff")
+    }, countdown.length * 400)
+
+    // scroll in once the rocket is well underway
+    setTimeout(() => {
+        contentSection.scrollIntoView({ behavior: "smooth" })
+    }, countdown.length * 400 + 550)
+
+    // clean up and hide the overlay
+    setTimeout(() => {
+        launchOverlay.classList.remove("active", "liftoff")
+    }, countdown.length * 400 + 1250)
+}
+
 
 button.addEventListener("contextmenu" , ()=>{
     alert("DON'T HACK US WE ARE CURRENTLY BROKE...!!!")
 })
 
 button.addEventListener("click" , ()=>{
-    alert("THE SITE IS UNDER CONSTRUCTION...!!!")
+    launchJourney()
 })
 
 
