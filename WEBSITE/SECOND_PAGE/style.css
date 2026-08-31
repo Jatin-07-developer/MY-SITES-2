@@ -22,6 +22,10 @@ html {
 
 body {
     overflow-x: hidden;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 img {
@@ -59,13 +63,18 @@ h1 {
     margin-top: 15%;
     z-index: 1;
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Space Grotesk', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.1;
 }
 
 p {
     font-size: clamp(15px, 2.2vw, 25px);
     color: white;
     text-align: center;
+    font-weight: 400;
+    line-height: 1.7;
 }
 
 .sun {
@@ -90,7 +99,9 @@ h2 {
     font-size: clamp(30px, 5vw, 50px);
     color: rgb(255, 203, 72);
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Space Grotesk', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
     margin-bottom: 40px;
 }
 
@@ -136,13 +147,15 @@ h3 {
     font-size: clamp(24px, 3.5vw, 35px);
     color: rgb(255, 203, 72);
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Space Grotesk', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
 }
 
 span {
     text-align: center;
     color: white;
     font-size: clamp(15px, 2vw, 20px);
+    letter-spacing: 0.3px;
 }
 
 /* Planet Section */
@@ -153,10 +166,11 @@ span {
 .header {
     color: rgb(143, 120, 255);
     font-size: clamp(28px, 5vw, 50px);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Space Grotesk', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
     margin-top: 10%;
     text-align: center;
-    font-weight: 700;
 }
 
 .mercury,
@@ -205,7 +219,9 @@ h5 {
     font-size: clamp(26px, 4vw, 40px);
     color: white;
     margin-top: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Space Grotesk', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     margin-bottom: 20px;
 }
 
@@ -220,6 +236,7 @@ h5 {
     display: block;
     font-size: clamp(16px, 2vw, 22px);
     color: white;
+    line-height: 1.6;
 }
 
 .boxes2 {
@@ -260,13 +277,17 @@ h5 {
 .para {
     color: white;
     font-size: clamp(13px, 1.6vw, 15px);
-    font-weight: lighter;
+    font-weight: 500;
     text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    opacity: 0.65;
 }
 
 .header2 {
     color: white;
     font-size: clamp(18px, 2.4vw, 25px);
+    font-weight: 600;
     text-align: left;
 }
 
@@ -274,9 +295,9 @@ ul {
     margin-top: 25px;
     color: whitesmoke;
     font-size: clamp(14px, 1.8vw, 15px);
-    font-family: cursive;
-    list-style-type: "⭐";
-    padding-left: 20px;
+    line-height: 1.7;
+    list-style-type: "⭐  ";
+    padding-left: 22px;
 }
 
 /* FOOTER  */
@@ -298,15 +319,17 @@ h6 {
     font-size: clamp(26px, 4vw, 40px);
     color: rgb(218, 178, 255);
     padding-top: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Space Grotesk', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
     margin-bottom: 4%;
 }
 
 ol {
-    list-style-type: "💫";
+    list-style-type: "💫  ";
     color: whitesmoke;
     font-size: clamp(15px, 2vw, 20px);
-    font-family: cursive;
+    line-height: 1.7;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -337,7 +360,9 @@ footer {
     text-align: center;
     color: rgb(103, 103, 103);
     font-size: clamp(15px, 2vw, 20px);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.4px;
 }
 
 /* MEDIA QUERIES */
