@@ -14,10 +14,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ==========================================
-   HERO SECTION — fills the first screen so
-   "SCROLL DOWN" actually means something
-========================================== */
 .hero {
     min-height: 100svh;
     display: flex;
@@ -66,7 +62,6 @@ p {
     color: white;
 }
 
-/* Header buttons: flex row that wraps and stays centered on any screen */
 .header-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -116,7 +111,6 @@ button:active {
     z-index: 10;
 }
 
-/* SPACE FACT POPUP */
 .fact-overlay {
     position: fixed;
     inset: 0;
@@ -247,7 +241,6 @@ button:active {
     box-shadow: none;
 }
 
-/* ROCKET LAUNCH INTRO */
 .launch-overlay {
     position: fixed;
     inset: 0;
@@ -672,7 +665,6 @@ a {
     color: white;
 }
 
-/* MEDIA QUERIES */
 @media (max-width: 1024px) {
     .boxes {
         gap: 40px;
