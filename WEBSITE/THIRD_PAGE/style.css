@@ -163,9 +163,6 @@ h2 {
     letter-spacing: 2px;
 }
 
-/* .para2 is used in the HTML for milestone descriptions but had no
-   rule of its own, so it fell back to the browser default (black text) —
-   giving it a rule makes that text actually visible and scale responsively */
 .para2 {
     font-size: clamp(15px, 1.8vw, 20px);
     color: rgba(255, 255, 255, 0.85);
@@ -340,11 +337,7 @@ footer {
     margin-top: 20px;
 }
 
-/* ==========================================
-   RESPONSIVE MEDIA QUERIES
-   Layout only — font sizes are fluid via clamp()
-========================================== */
-
+/* Media Queries */
 @media (max-width: 1024px) {
     .frontier {
         flex-direction: column;
@@ -376,8 +369,6 @@ footer {
         text-align: center;
     }
 
-    /* Reset the row-only flex-basis so it doesn't get reinterpreted
-       as a height constraint once the row becomes a column */
     .hello img {
         flex: 0 1 auto;
         width: 100%;

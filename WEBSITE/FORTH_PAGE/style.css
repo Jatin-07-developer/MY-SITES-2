@@ -370,10 +370,7 @@ footer {
     letter-spacing: 0.3px;
 }
 
-/* ==========================================
-   RESPONSIVE MEDIA QUERIES
-   Layout only — font sizes are fluid via clamp()
-========================================== */
+/* Media Queries */
 
 @media (max-width: 1024px) {
     .galaxies,
@@ -437,9 +434,6 @@ footer {
     }
 }
 
-/* Disable fixed background attachment on touch devices — iOS Safari
-   in particular renders it inconsistently and it can hurt scroll
-   performance, so let it scroll normally on small screens instead */
 @media (max-width: 768px), (hover: none) {
     html {
         background-attachment: scroll;
