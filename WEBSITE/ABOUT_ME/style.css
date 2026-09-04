@@ -194,10 +194,7 @@ img {
     box-shadow: 0 8px 24px rgba(143, 104, 255, 0.4);
 }
 
-/* ==========================================
-   RESPONSIVE MEDIA QUERIES
-========================================== */
-
+/* Media Quearies */
 @media (max-width: 768px) {
     .me {
         flex-direction: column;
